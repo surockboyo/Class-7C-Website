@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "appVersion": "1.0.0",
+  "publishedVersion": 1,
+  "exportedAt": "2026-11-01T00:00:00.000Z",
+  "collections": {
+    "classInfo": [
+      {
+        "id": "demo-class",
+        "name": "Kelas Contoh",
+        "description": "Contoh informasi kelas. Perbarui lewat Dashboard sebelum dipublikasikan.",
+        "label": "Data contoh",
+        "createdAt": "2026-11-01T00:00:00.000Z",
+        "updatedAt": "2026-11-01T00:00:00.000Z",
+        "deletedAt": null
+      }
+    ],
+    "homework": [
+      {
+        "id": "demo-homework-1",
+        "title": "Latihan pecahan",
+        "description": "Selesaikan latihan halaman 24 nomor 1-5. Ini data contoh dan boleh diubah.",
+        "subject": "Matematika",
+        "date": "2026-11-06",
+        "author": "Contoh",
+        "status": "active",
+        "createdAt": "2026-11-01T00:00:00.000Z",
+        "updatedAt": "2026-11-01T00:00:00.000Z",
+        "deletedAt": null
+      }
+    ],
+    "exams": [
+      {
+        "id": "demo-exam-1",
+        "title": "Ulangan bab ekosistem",
+        "description": "Materi rantai makanan dan keseimbangan ekosistem. Jadwal contoh.",
+        "subject": "IPA",
+        "date": "2026-11-12",
+        "author": "Contoh",
+        "status": "active",
+        "createdAt": "2026-11-01T00:00:00.000Z",
+        "updatedAt": "2026-11-01T00:00:00.000Z",
+        "deletedAt": null
+      }
+    ],
+    "outlines": [
+      {
+        "id": "demo-outline-1",
+        "title": "Kisi-kisi ekosistem",
+        "description": "Komponen ekosistem, rantai makanan, dan perubahan lingkungan. Ini contoh.",
+        "subject": "IPA",
+        "date": "2026-11-12",
+        "author": "Contoh",
+        "status": "active",
+        "createdAt": "2026-11-01T00:00:00.000Z",
+        "updatedAt": "2026-11-01T00:00:00.000Z",
+        "deletedAt": null
+      }
+    ],
+    "announcements": [
+      {
+        "id": "demo-announcement-1",
+        "title": "Selamat datang",
+        "description": "Informasi ini hanya data contoh. Tambahkan kabar kelas yang benar setelah mengatur Dashboard.",
+        "author": "Contoh",
+        "date": "2026-11-01",
+        "status": "active",
+        "createdAt": "2026-11-01T00:00:00.000Z",
+        "updatedAt": "2026-11-01T00:00:00.000Z",
+        "deletedAt": null
+      }
+    ],
+    "customSections": [],
+    "schedule": [
+      { "id": "demo-m1", "day": 1, "subject": "Matematika", "start": "07:00", "end": "07:40", "teacher": "Guru contoh", "classroom": "Kelas contoh", "createdAt": "2026-11-01T00:00:00.000Z", "updatedAt": "2026-11-01T00:00:00.000Z", "deletedAt": null },
+      { "id": "demo-m2", "day": 1, "subject": "Bahasa Indonesia", "start": "07:50", "end": "08:30", "teacher": "Guru contoh", "classroom": "Kelas contoh", "createdAt": "2026-11-01T00:00:00.000Z", "updatedAt": "2026-11-01T00:00:00.000Z", "deletedAt": null },
+      { "id": "demo-t1", "day": 2, "subject": "IPA", "start": "07:00", "end": "07:40", "teacher": "Guru contoh", "classroom": "Kelas contoh", "createdAt": "2026-11-01T00:00:00.000Z", "updatedAt": "2026-11-01T00:00:00.000Z", "deletedAt": null },
+      { "id": "demo-t2", "day": 2, "subject": "Bahasa Inggris", "start": "07:50", "end": "08:30", "teacher": "Guru contoh", "classroom": "Kelas contoh", "createdAt": "2026-11-01T00:00:00.000Z", "updatedAt": "2026-11-01T00:00:00.000Z", "deletedAt": null },
+      { "id": "demo-w1", "day": 3, "subject": "IPS", "start": "07:00", "end": "07:40", "teacher": "Guru contoh", "classroom": "Kelas contoh", "createdAt": "2026-11-01T00:00:00.000Z", "updatedAt": "2026-11-01T00:00:00.000Z", "deletedAt": null },
+      { "id": "demo-w2", "day": 3, "subject": "Seni Budaya", "start": "07:50", "end": "08:30", "teacher": "Guru contoh", "classroom": "Kelas contoh", "createdAt": "2026-11-01T00:00:00.000Z", "updatedAt": "2026-11-01T00:00:00.000Z", "deletedAt": null },
+      { "id": "demo-th1", "day": 4, "subject": "PJOK", "start": "07:00", "end": "07:40", "teacher": "Guru contoh", "classroom": "Lapangan contoh", "createdAt": "2026-11-01T00:00:00.000Z", "updatedAt": "2026-11-01T00:00:00.000Z", "deletedAt": null },
+      { "id": "demo-th2", "day": 4, "subject": "Matematika", "start": "07:50", "end": "08:30", "teacher": "Guru contoh", "classroom": "Kelas contoh", "createdAt": "2026-11-01T00:00:00.000Z", "updatedAt": "2026-11-01T00:00:00.000Z", "deletedAt": null },
+      { "id": "demo-f1", "day": 5, "subject": "Pendidikan Pancasila", "start": "07:00", "end": "07:40", "teacher": "Guru contoh", "classroom": "Kelas contoh", "createdAt": "2026-11-01T00:00:00.000Z", "updatedAt": "2026-11-01T00:00:00.000Z", "deletedAt": null }
+    ],
+    "students": [
+      { "id": "demo-student-1", "name": "Siswa Contoh 1", "createdAt": "2026-11-01T00:00:00.000Z", "updatedAt": "2026-11-01T00:00:00.000Z", "deletedAt": null },
+      { "id": "demo-student-2", "name": "Siswa Contoh 2", "createdAt": "2026-11-01T00:00:00.000Z", "updatedAt": "2026-11-01T00:00:00.000Z", "deletedAt": null },
+      { "id": "demo-student-3", "name": "Siswa Contoh 3", "createdAt": "2026-11-01T00:00:00.000Z", "updatedAt": "2026-11-01T00:00:00.000Z", "deletedAt": null }
+    ],
+    "gallery": [],
+    "reports": [],
+    "suggestions": [],
+    "settings": [
+      { "id": "main", "switchTime": "20:00", "schoolDays": [1, 2, 3, 4, 5], "whatsappNumber": "", "galleryMaxBytes": 5242880, "reportCooldownSeconds": 60, "excludePicked": false, "mutedWheel": false, "vibrationEnabled": false, "createdAt": "2026-11-01T00:00:00.000Z", "updatedAt": "2026-11-01T00:00:00.000Z", "deletedAt": null }
+    ],
+    "theme": [
+      { "id": "main", "value": "system", "accent": "red", "createdAt": "2026-11-01T00:00:00.000Z", "updatedAt": "2026-11-01T00:00:00.000Z", "deletedAt": null }
+    ],
+    "wheelHistory": []
+  }
+}

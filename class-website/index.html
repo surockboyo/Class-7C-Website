@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f3f6fb">
+    <meta name="description" content="Ruang belajar dan berbagi untuk teman sekelas SMPN 62 Surabaya.">
+    <title>Ruang Kelas — SMPN 62 Surabaya</title>
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="icon" href="./assets/icons/icon-192.png" type="image/png">
+    <script>
+      /* PROTECTED */
+      try {
+        const themeRecord = JSON.parse(localStorage.getItem("ruangTemu:v1:theme") || "[]")[0];
+        const theme = ["light", "dark", "system"].includes(themeRecord?.value) ? themeRecord.value : "system";
+        const resolved = theme === "system" ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : theme;
+        document.documentElement.dataset.theme = resolved;
+        document.documentElement.dataset.accent = ["red", "yellow", "blue", "green"].includes(themeRecord?.accent) ? themeRecord.accent : "red";
+        document.querySelector('meta[name="theme-color"]').content = resolved === "dark" ? "#0A0D0C" : "#F3F1EA";
+      } catch {
+        document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.dataset.accent = "red";
+      }
+      /* END PROTECTED */
+    </script>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="./assets/vendor/supabase-js-2.118.0.js"></script>
+    <script type="module" src="./assets/js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#app-main">Lewati ke konten</a>
+    <header class="topbar">
+      <button class="brand-mark" id="brand-mark" type="button" aria-label="Ruang Kelas">
+        <span class="brand-icon" aria-hidden="true">rk</span>
+        <span class="brand-copy"><strong>Ruang Kelas</strong><small>SMPN 62 · SURABAYA</small></span>
+      </button>
+      <div class="topbar-actions">
+        <span class="source-pill" id="source-pill">Published</span>
+        <!-- /* PROTECTED */ -->
+        <button class="eraser-switch" id="theme-switch" type="button" role="switch" data-action="theme" aria-checked="false" aria-label="Mode gelap">
+          <span class="eraser-grip" aria-hidden="true"></span>
+          <span class="eraser-label">Terang</span>
+        </button>
+        <!-- /* END PROTECTED */ -->
+      </div>
+    </header>
+    <p id="connection-status" class="warning-message" role="status" hidden></p>
+    <script>
+      /* PROTECTED */
+      const themeSwitch = document.querySelector("#theme-switch");
+      const darkTheme = document.documentElement.dataset.theme === "dark";
+      themeSwitch.setAttribute("aria-checked", String(darkTheme));
+      themeSwitch.querySelector(".eraser-label").textContent = darkTheme ? "Gelap" : "Terang";
+      /* END PROTECTED */
+    </script>
+    <main id="app-main" class="app-main" tabindex="-1">
+      <section id="loading-view" class="loading-view" aria-live="polite">
+        <span class="loading-dot" aria-hidden="true"></span>
+        <p>Menyiapkan ruang kelas…</p>
+      </section>
+      <div id="view-root" hidden></div>
+    </main>
+    <nav id="bottom-nav" class="bottom-nav" aria-label="Navigasi utama" hidden></nav>
+    <div id="live-region" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <dialog id="app-dialog" class="app-dialog" aria-labelledby="dialog-title">
+      <form id="dialog-form" class="dialog-card" method="dialog">
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow" id="dialog-eyebrow">Ruang Kelas</p>
+            <h2 id="dialog-title">Info</h2>
+          </div>
+          <button class="icon-button dialog-close" type="button" data-dialog-close aria-label="Tutup">×</button>
+        </div>
+        <div id="dialog-content" class="dialog-content"></div>
+        <div id="dialog-actions" class="dialog-actions"></div>
+      </form>
+    </dialog>
+    <!-- /* PROTECTED */ -->
+    <dialog id="viewer-dialog" class="viewer-dialog" aria-label="Penampil gambar">
+      <button class="viewer-close icon-button" type="button" data-viewer-close aria-label="Tutup gambar">×</button>
+      <img id="viewer-image" alt="">
+      <p id="viewer-caption"></p>
+    </dialog>
+    <!-- /* END PROTECTED */ -->
+  </body>
+</html>

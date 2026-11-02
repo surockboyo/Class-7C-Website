@@ -1,0 +1,8 @@
+{
+  "name": "kelas-smpn-62",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}
